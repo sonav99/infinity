@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infinity</title>
+    
+</head>
+<style>
+    body{
+    background-color:grey;
+    background: url("Spotify Clone/bg.jpg")no-repeat center center/cover;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.bottom{
+    position: fixed;
+    bottom: 0;
+   background-color: black; 
+   margin: 0;
+   height: 84px;
+   display: flex;
+   width: 100vw;
+   z-index: -1;
+}
+nav{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    width: 250px;
+    height: 100vh;
+    font-size: 14px;
+    position: fixed;
+}
+nav ul{
+   
+    list-style: none;
+}
+nav li{
+    padding: 13px;
+    height: 32px;
+}
+nav li a{
+    position: relative;
+    top: -37px;
+    text-decoration: none;
+    color: rgb(187, 181, 181);
+}
+.logo{
+    height: 50px;
+    margin: 40px;
+}
+.home{
+    width: 35px;
+    margin: 25px;
+    height: 25px;
+}
+.search{
+    width: 35px;
+    margin: 25px;
+}
+.lib{
+    filter: invert(100%);
+    width: 35px;
+    margin: 25px;
+}
+.play{
+    width: 35px;
+    margin: 30px 25px 25px 25px;
+    height: 30px;
+}
+.like{
+    width: 35px;
+    margin: 25px;
+    height: 30px;
+}
+nav li a:hover{
+    color: white;
+}
+.name{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    left: 100px;
+    top: 45px;
+}
+
+.container{
+    position: relative;
+    left: 250px;
+    right: 0;
+    height: 85vh;
+    width: 82vw;
+    z-index: -2;
+}
+
+#playlist{
+    position: relative;
+    left: 330px;
+    width: 46vw;  
+    height: 5px;
+    top: 45px;
+    cursor: pointer;
+}
+
+.icons img{
+    height: 50px;
+    position: relative;
+    top: 20px;
+    left: 370px;
+    cursor: pointer;
+    
+}
+.songs{
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 40px 10px 30px 10px;
+    width: 30vw;
+}
+.songs img{
+    height: 50px;
+    width: 50px;
+    margin: 7px 30px;
+}
+.songs span{
+    position: relative;
+    bottom: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.songlist img{
+    position: relative;
+    float: right;
+    top: 40px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+h1{
+    color: white;
+}
+.songinfo{
+    color: white;
+    position: relative;
+    left: 262px;
+    top: 60px;
+}
+.btn{
+    height: 50px;
+    position: relative;
+    top: 20px;
+    left: 370px;
+    cursor: pointer;
+    filter: invert(100%);
+    
+}
+ </style>
+<body>
+    
+    <nav>
+        <img src="Spotify Clone/logo.png" class="logo">
+        <p class="name">Infinity</p>
+        <ul>
+        
+        <li class="brand">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF96oowdTDREsGcCOZM9W-7zX1WieXJF8c7mIUi38k2Q&usqp=CAU&ec=48600113" class="home">
+            <a href="#">Home</a></li>
+        <li class="brand">
+            <img src="https://png.pngtree.com/png-vector/20190321/ourmid/pngtree-vector-find-icon-png-image_854997.jpg" class="search">
+            <a href="#">search</a></li>
+        <li class="brand">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6b3-nVhGPO01gG5V8eY5Y56Zy0sYTV41DtGO3o-Opzg&usqp=CAU&ec=48600113" class="lib">
+            <a href="#">Your Library</a></li>
+        <li class="brand">
+            <img src="https://www.shutterstock.com/image-vector/add-icon-vector-260nw-787917013.jpg" class="play">
+            <a href="#">Create Playlist</a></li>
+        <li class="brand">
+            <img src="https://pbs.twimg.com/media/E6ejI_tWUAEZYJA.jpg" class="like">
+            <a href="#">Liked Songs</a></li>
+    </ul>
+    </nav>
+    <div class="container">
+        <h1>Best of NCS- no copyright sounds</h1>
+        <div class="songs">
+           <img src="Spotify Clone/covers/1.jpg" >
+           <span>Legion</span>
+           <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+        </div>
+        <div class="songs">
+            <img src="Spotify Clone/covers/2.jpg" >
+            <span>Trap</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+         <div class="songs">
+            <img src="Spotify Clone/covers/3.jpg" >
+            <span>They Mad</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+         <div class="songs">
+            <img src="Spotify Clone/covers/4.jpg" >
+            <span>Plug Walk</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+         <div class="songs">
+            <img src="Spotify Clone/covers/5.jpg" >
+            <span>Song Title</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+         <div class="songs">
+            <img src="Spotify Clone/covers/6.jpg" >
+            <span>Safety Dance</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+         <div class="songs">
+            <img src="Spotify Clone/covers/7.jpg" >
+            <span>Back it up</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+         <div class="songs">
+            <img src="Spotify Clone/covers/8.jpg" >
+            <span>no title</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+         <div class="songs">
+            <img src="Spotify Clone/covers/9.jpg" >
+            <span>true love</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+         <div class="songs">
+            <img src="Spotify Clone/covers/10.jpg" >
+            <span>Destiny</span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+         </div>
+
+    </div>
+    <div class="bottom">
+        <div class="songinfo">
+            <span>Warriyo - Mortals [NCS Release]</span>
+        </div>
+        <input type="range" name="range" id="playlist" min="0" max="100">
+        <div class="icons">
+        <img src="icons8-end-50.png" class="first">
+          <img src="icons8-play-48.png" onclick="playsong()"/>
+    
+        <img src="icons8-end-50 (1).png" class="last">
+    </div>
+        
+</div>
+<script>
+    let sonIndex=0;
+   
+  let playlist=document.getElementById("playlist");
+  let mid=document.getElementById("mid");
+  let songs= Array.from(document.getElementsByClassName("songs"));
+  let songlist=[
+    {songname:"Legion" ,filepath:"spotify clone/songs/1.mp3" ,coverpath: "spotify clone/cover/1.jpg"},
+    {songname:"Trap" ,filepath:"spotify clone/songs/2.mp3" ,coverpath: "spotify clone/cover/2.jpg"},
+    {songname:"they mad" ,filepath:"spotify clone/songs/3.mp3", coverpath: "spotify clone/cover/3.jpg"},
+    {songname:"plug walk" ,filepath:"spotify clone/songs/4.mp3", coverpath: "spotify clone/cover/4.jpg"},
+    {songname:"song title" ,filepath:"spotify clone/songs/5.mp3", coverpath: "spotify clone/cover/5.jpg"},
+    {songname:"safety dance" ,filepath:"spotify clone/songs/6.mp3", coverpath: "spotify clone/cover/6.jpg"},
+    {songname:"back it up", filepath:"spotify clone/songs/7.mp3", coverpath: "spotify clone/cover/7.jpg"},
+    {songname:"no title" ,filepath:"spotify clone/songs/8.mp3", coverpath: "spotify clone/cover/8.jpg"},
+    {songname:"true love" ,filepath:"spotify clone/songs/9.mp3", coverpath: "spotify clone/cover/9.jpg"},
+    {songname:"destiny", filepath:"spotify clone/songs/10.mp3", coverpath: "spotify clone/cover/10.jpg"}
+]
+function playsong(){
+    let audioElement= new Audio('Laal Chunariya - Akull.mp3');
+audioElement.play();
+}
+/* mid.addEventListener("cilck",()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+ audioElement.play();
+ mid.remove('icons8-play-48.png');
+ mid.add('icons8-pause-button-48.png');
+    }
+ });
+
+
+playlist.addEventListener('timeupdate',()=>{
+   console.log('timeupdate');
+});
+
+
+</script>
+
+</body>
+</html>
