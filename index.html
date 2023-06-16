@@ -242,19 +242,21 @@ h1{
             <span>Warriyo - Mortals [NCS Release]</span>
         </div>
         <input type="range" name="range" id="playlist" min="0" max="100">
-        <div class="icons">
-        <img src="icons8-end-50.png" class="first">
-          <img src="icons8-play-48.png" onclick="playsong()"/>
+        <div class="icons" id="image container">
+        <img src="icons8-end-50.png" class="first"/>
+          <img src="icons8-play-48.png" onclick="playsong()" id="mid"/>
     
-        <img src="icons8-end-50 (1).png" class="last">
+        <img src="icons8-end-50 (1).png" class="last"/>
     </div>
         
 </div>
 <script>
-    let sonIndex=0;
-   
   let playlist=document.getElementById("playlist");
+ let parentelement=document.getElementById('image container')
   let mid=document.getElementById("mid");
+  let newimage= document.createElement('img');
+  newimage.src='icons8-pause-button-48.png';
+  newimage.alt='new image';
   let songs= Array.from(document.getElementsByClassName("songs"));
   let songlist=[
     {songname:"Legion" ,filepath:"spotify clone/songs/1.mp3" ,coverpath: "spotify clone/cover/1.jpg"},
@@ -268,10 +270,17 @@ h1{
     {songname:"true love" ,filepath:"spotify clone/songs/9.mp3", coverpath: "spotify clone/cover/9.jpg"},
     {songname:"destiny", filepath:"spotify clone/songs/10.mp3", coverpath: "spotify clone/cover/10.jpg"}
 ]
-function playsong(){
-    let audioElement= new Audio('Laal Chunariya - Akull.mp3');
-audioElement.play();
-}
+let audioElement= new Audio('spotify clone/songs/1.mp3');
+parentelement.addEventListener('click',()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+     audioElement.play();
+     parentelement.replaceChild(newimage , mid);
+    }
+    else{
+        audioElement.pause();
+     parentelement.replaceChild(mid , newimage);
+    }
+ });
 
 </script>
 
