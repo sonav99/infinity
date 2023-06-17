@@ -96,8 +96,7 @@ nav li a:hover{
     width: 82vw;
     z-index: -2;
 }
-
-#playlist{
+#progressbar{
     position: relative;
     left: 330px;
     width: 46vw;  
@@ -105,8 +104,12 @@ nav li a:hover{
     top: 45px;
     cursor: pointer;
 }
-
+.icons{
+    display: flex;
+}
+    
 .icons img{
+
     height: 30px;
     position: relative;
     top: 30px;
@@ -241,7 +244,7 @@ h1{
         <div class="songinfo">
             <span>Warriyo - Mortals [NCS Release]</span>
         </div>
-        <input type="range" name="range" id="playlist" min="0" max="100">
+        <input type="range" name="range" id="progressbar" min="0" max="100">
         <div class="icons" id="image container">
         <img src="icons8-end-50.png" class="first"/>
           <img src="icons8-play-48.png" onclick="playsong()" id="mid"/>
@@ -251,7 +254,8 @@ h1{
         
 </div>
 <script>
-  let playlist=document.getElementById("playlist");
+  let progressbar=document.getElementById("progressbar");
+    let progress=document.createElement('img');
  let parentelement=document.getElementById('image container')
   let mid=document.getElementById("mid");
   let newimage= document.createElement('img');
@@ -281,6 +285,15 @@ parentelement.addEventListener('click',()=>{
      parentelement.replaceChild(mid , newimage);
     }
  });
+audioElement.addEventListener('timeupdate',()=>{
+    progress=parseInt((audioElement.currentTime/audioElement.duration)*100);
+    progressbar.value=progress;
+
+ });
+ progressbar.addEventListener('change',()=>{
+    audioElement.currentTime=progressbar.value*audioElement.duration/ 100;
+ });
+
 
 </script>
 
