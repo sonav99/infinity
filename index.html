@@ -25,7 +25,7 @@
    height: 84px;
    display: flex;
    width: 100vw;
-   z-index: -1;
+   z-index: 2;
 }
 nav{
     font-family: Arial, Helvetica, sans-serif;
@@ -94,7 +94,7 @@ nav li a:hover{
     right: 0;
     height: 85vh;
     width: 82vw;
-    z-index: -2;
+    
 }
 #progressbar{
     position: relative;
@@ -191,52 +191,52 @@ h1{
         <div class="songs">
            <img src="Spotify Clone/covers/1.jpg" >
            <span>Legion</span>
-           <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+           <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
         </div>
         <div class="songs">
             <img src="Spotify Clone/covers/2.jpg" >
             <span>Trap</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
          <div class="songs">
             <img src="Spotify Clone/covers/3.jpg" >
             <span>They Mad</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
          <div class="songs">
             <img src="Spotify Clone/covers/4.jpg" >
             <span>Plug Walk</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
          <div class="songs">
             <img src="Spotify Clone/covers/5.jpg" >
             <span>Song Title</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
          <div class="songs">
             <img src="Spotify Clone/covers/6.jpg" >
             <span>Safety Dance</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
          <div class="songs">
             <img src="Spotify Clone/covers/7.jpg" >
             <span>Back it up</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
          <div class="songs">
             <img src="Spotify Clone/covers/8.jpg" >
             <span>no title</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
          <div class="songs">
             <img src="Spotify Clone/covers/9.jpg" >
             <span>true love</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
          <div class="songs">
             <img src="Spotify Clone/covers/10.jpg" >
             <span>Destiny</span>
-            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png"></span>
+            <span class="songlist"><img src="https://img.icons8.com/?size=1x&id=GwYlS5m5Goz6&format=png" onclick="songitemplay('spotify clone/songs/1.mp3')"></span>
          </div>
 
     </div>
@@ -294,6 +294,25 @@ audioElement.addEventListener('timeupdate',()=>{
     audioElement.currentTime=progressbar.value*audioElement.duration/ 100;
  });
 
+var isplaying=false;
+   function songitemplay(url){
+    var audio = new Audio(url);
+    
+    if(isplaying==false){
+        audio.play();
+     isplaying=true;
+     
+    }
+    else{
+       // playing.src='icons8-pause-button-48.png'
+        audio.pause();
+        isplaying=false;
+    
+    
+}
+    
+    
+   }
 
 </script>
 
